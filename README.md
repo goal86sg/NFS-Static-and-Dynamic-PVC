@@ -51,24 +51,6 @@ spec:
 #### Create NFS PVC Claim
 ```
 apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: nfs-pv
-  labels:
-    name: mynfs # name can be anything
-spec:
-  storageClassName: manual # same storage class as pvc
-  capacity:
-    storage: 1Gi
-  accessModes:
-    - ReadWriteMany
-  nfs:
-    server: 10.10.0.243 # ip addres of nfs server
-    path: "/share" # path to directory
-platypus@platypus01:~/nfspvc$ ls
-nfs-claim.yaml  nfs.yaml  nginx-deployment.yaml
-platypus@platypus01:~/nfspvc$ cat nfs-claim.yaml
-apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: nfs-pvc
