@@ -268,3 +268,8 @@ spec:
         - name: nfs-test # name of volume should match claimName volume
           mountPath: share # mount inside of contianer
 ```
+
+## Reference article
+```
+https://medium.com/@myte/kubernetes-nfs-and-dynamic-nfs-provisioning-97e2afb8b4a9
+```
